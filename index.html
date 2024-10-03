@@ -19,7 +19,7 @@
       height: 100vh;
       margin: 0;
       color: white;
-      background-color: #000000;
+      background-color: #F2F2F2;
       font-family: Arial, sans-serif;
     }
 
@@ -28,12 +28,21 @@
       text-align: center
     }
 
+    .shadow-box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+      /* Horizontal offset, vertical offset, blur radius, and shadow color */
+    }
+    
+
     .center-div {
       width: 50vw;
       height: 80vh;
-      background-color: rgb(102, 71, 255);
+      /* background-color: #4054B2; */
       border-radius: 15px;
-      padding: 5px;
+      padding: 0px;
       box-sizing: border-box;
       color: white;
       display: flex;
@@ -69,13 +78,34 @@
 <body>
   <div>
     <div>
-      <div class="center-div">
+      <div class="center-div shadow-box">
         <iframe id="bpFull" srcdoc="<!DOCTYPE html><html><body>
             <script src='https://cdn.botpress.cloud/webchat/v2.2/inject.js'></script>
-            <script src='https://files.bpcontent.cloud/2024/10/03/17/20241003172854-4SDJOK99.js'></script>
+            <script>
+              window.botpress.init({
+  'botId': 'cebcff42-5824-42c3-9e58-4bf7351af945',
+  'configuration': {
+    'botName': 'Jack',
+    'website': {},
+    'email': {},
+    'phone': {},
+    'termsOfService': {},
+    'privacyPolicy': {},
+    'color': '#052B69',
+    'variant': 'solid',
+    'themeMode': 'light',
+    'fontFamily': 'ibm',
+    'radius': 2.5,
+    'showPoweredBy': true,
+    'additionalStylesheet': ''
+  },
+  'clientId': '57c472c4-d6d5-4aee-9f66-221c7a0898df'
+});
+
+            </script>
                 <script>
               // Open webchat
-              /* webchat:ready doesn't seem to trigger with version 2024100306490 ╭∩╮ (︶︿︶) ╭∩╮ */
+              // webchat:ready doesn't seem to trigger with version 2024100306490 ╭∩╮ (︶︿︶) ╭∩╮ 
               //window.botpress.on('webchat:ready', (conversationId) => { botpress.open(); });
               window.addEventListener('load', function() { botpress.open(); });
             </script>
