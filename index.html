@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+    Thank you to the Botpress community (https://discord.com/channels/1108396290624213082) for their suggestions regarding this example.
+    A special greeting to François, aka 000Bo, for his post: https://discord.com/channels/1108396290624213082/1272227414197669960
+  -->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Botpress Full-Width in a DIV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+      background-color: #000000;
+      font-family: Arial, sans-serif;
+    }
+
+    h2,
+    h3 {
+      text-align: center
+    }
+
+    .center-div {
+      width: 50vw;
+      height: 80vh;
+      background-color: rgb(102, 71, 255);
+      border-radius: 15px;
+      padding: 5px;
+      box-sizing: border-box;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .center-div {
+        width: 80vw;
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .center-div {
+        width: 80vw;
+      }
+    }
+
+    #bpFull {
+      width: 100%;
+      height: 100%;
+      border: none;
+      overflow: auto;
+      /* Allow iframe to be scrollable */
+      -webkit-overflow-scrolling: touch;
+      /* Smooth scrolling for iOS Safari */
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div>
+      <div class="center-div">
+        <iframe id="bpFull" srcdoc="<!DOCTYPE html><html><body>
+            <script src='https://cdn.botpress.cloud/webchat/v2.2/inject.js'></script>
+            <script src='https://files.bpcontent.cloud/2024/10/03/17/20241003172854-4SDJOK99.js'></script>
+                <script>
+              // Open webchat
+              /* webchat:ready doesn't seem to trigger with version 2024100306490 ╭∩╮ (︶︿︶) ╭∩╮ */
+              //window.botpress.on('webchat:ready', (conversationId) => { botpress.open(); });
+              window.addEventListener('load', function() { botpress.open(); });
+            </script>
+            <style>
+              @media (min-width:768px) {
+                .bpWebchat { width: 100%; height: 100%; right: 0; bottom: 0; max-height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
+              }
+            </style></body></html>"></iframe>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
