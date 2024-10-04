@@ -1,0 +1,44 @@
+  <iframe id="bpFull" style="width: 100%; height: 100%; border: none; overflow: auto; -webkit-overflow-scrolling: touch;" srcdoc="<!DOCTYPE html><html><body>
+            <script src='https://cdn.botpress.cloud/webchat/v2.2/inject.js'></script>
+            <script>
+              window.botpress.init({
+  'botId': 'cebcff42-5824-42c3-9e58-4bf7351af945',
+  'showCloseButton' : false,
+  'configuration': {
+    'botName': 'Jack',
+    'website': {},
+    'email': {},
+    'phone': {},
+    'termsOfService': {},
+    'privacyPolicy': {},
+    'color': '#052B69',
+    'variant': 'solid',
+    'themeMode': 'light',
+    'fontFamily': 'ibm',
+    'radius': 2.5,
+    'showPoweredBy': true,
+    'additionalStylesheet': ''
+  },
+  'clientId': '57c472c4-d6d5-4aee-9f66-221c7a0898df'
+});
+
+            </script>
+            <script>
+// Select the SVG element by its class
+var svgElement = document.querySelector('.bpHeaderContentActionsIcons');
+
+// Remove the element if it exists
+if (svgElement) {
+  svgElement.remove();
+}
+
+            </script>
+            <script>
+              // Open webchat
+              window.addEventListener('load', function() { botpress.open(); });
+            </script>
+            <style>
+              @media (min-width:768px) {
+                .bpWebchat { width: 100%; height: 100%; right: 0; bottom: 0; max-height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
+              }
+            </style></body></html>"></iframe>
