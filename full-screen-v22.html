@@ -1,82 +1,17 @@
 <!DOCTYPE html>
 <html>
-<!-- 
-    Thank you to the Botpress community (https://discord.com/channels/1108396290624213082) for their suggestions regarding this example.
-    A special greeting to François, aka 000Bo, for his post: https://discord.com/channels/1108396290624213082/1272227414197669960
-  -->
 
 <head>
   <meta charset="UTF-8">
   <title>Botpress Full-Width in a DIV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    h2,
-    h3 {
-      text-align: center
-    }
-
-    .shadow-box {
-      width: 200px;
-      height: 200px;
-      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-      /* Horizontal offset, vertical offset, blur radius, and shadow color */
-    }
-
-
-    .center-div {
-      width: 99vw;
-      height: 98vh;
-      /* background-color: #4054B2; */
-      border-radius: 15px;
-      padding: 0px;
-      box-sizing: border-box;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    @media only screen and (max-width: 600px) {
-      .center-div {
-        width: 80vw;
-      }
-    }
-
-    @media only screen and (max-width: 1024px) {
-      .center-div {
-        width: 80vw;
-      }
-    }
-
-    #bpFull {
-      width: 100%;
-      height: 100%;
-      border: none;
-      overflow: auto;
-      /* Allow iframe to be scrollable */
-      -webkit-overflow-scrolling: touch;
-      /* Smooth scrolling for iOS Safari */
-    }
-  </style>
 </head>
 
-<body>
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: Arial, sans-serif;">
   <div>
     <div>
-      <div class="center-div shadow-box">
-        <iframe id="bpFull" srcdoc="<!DOCTYPE html><html><body>
+      <div style="width: 99vw; height: 98vh; border-radius: 15px; padding: 0px; box-sizing: border-box; color: white; display: flex; justify-content: center; align-items: center; text-align: center; box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);">
+        <iframe id="bpFull" style="width: 100%; height: 100%; border: none; overflow: auto; -webkit-overflow-scrolling: touch;" srcdoc="<!DOCTYPE html><html><body>
             <script src='https://cdn.botpress.cloud/webchat/v2.2/inject.js'></script>
             <script>
               window.botpress.init({
@@ -111,7 +46,7 @@ if (svgElement) {
 }
 
             </script>
-                <script>
+            <script>
               // Open webchat
               //window.botpress.on('webchat:ready', (conversationId) => { botpress.open(); });
               window.addEventListener('load', function() { botpress.open(); });
